@@ -100,19 +100,21 @@ namespace PongEmoji
                 return false;
             }
         }
-        public void Draw(bool remove = false)
+       public void Draw(bool remove = false)
         {
+            Console.CursorLeft = X;
+            Console.CursorTop = Y;
             if (remove)
             {
                 Console.ForegroundColor = ConsoleColor.Black;
+                Console.Write("  ");
             }
             else
             {
                 Console.ResetColor();
+                //Console.Write("X");
+                Console.Write("🏀");
             }
-            Console.CursorLeft = X;
-            Console.CursorTop = Y;
-            Console.Write("X");
         }
 
         public void Reset()

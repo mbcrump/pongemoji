@@ -21,7 +21,7 @@ namespace PongEmoji
         public void Start()
         {
             DrawScore();
-            while ((_firstPlayer.Points < 2) && (_secondPlayer.Points < 2))
+            while ((_firstPlayer.Points < 5) && (_secondPlayer.Points < 5))
             {
                 while (!Console.KeyAvailable) { }
                 _scored = false;
@@ -119,7 +119,8 @@ namespace PongEmoji
         {
             Console.CursorLeft = 3;
             Console.CursorTop = 0;
-            Console.Write("First player 👨 : {0}  |  Second player 👩🏿: {1}", _firstPlayer.Points, _secondPlayer.Points);
+            Console.WriteLine("First player 👨 : {0}  |  Second player 👩🏿: {1}", _firstPlayer.Points, _secondPlayer.Points);
+           // Console.WriteLine("👉🏽👉🏽👉🏽👉🏽👉🏽👉🏽First to 🖐 WINS!👈🏽👈🏽👈🏽👈🏽👈🏽👈🏽");
         }
 
         public void WhosTheWinner(string winner)
@@ -135,7 +136,7 @@ namespace PongEmoji
             Console.CursorLeft = 15;
             Console.CursorTop = 10;
             Console.Clear();
-            Environment.Exit(0);
+            
             Console.Write("Restart? (y/n)");
 
             while (true)
